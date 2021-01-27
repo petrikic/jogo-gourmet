@@ -9,7 +9,7 @@ public class Node implements BinaryNode {
 	
 	public Node(String question) {
 		this.question = question;
-		this.isYesNode = false;
+		this.isYesNode = true;
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class Node implements BinaryNode {
 	@Override
 	public void setNoNode(Node noNode) {
 		this.noNode = noNode;
-		noNode.setParentNode(this, isYesNode);
+		noNode.setParentNode(this, false);
 	}
 
 	private void setParentNode(Node node, boolean isYesNode) {
