@@ -12,8 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class CreateGameInterface extends JFrame {
-	private static final long serialVersionUID = 1L;
 	private BinaryTree binaryTree;
+	private static final long serialVersionUID = 1L;
 	private final String message = "O prato que você pensou é ";
 	private final String foodQuestion = "Qual prato você pensou?";
 	
@@ -23,7 +23,14 @@ public class CreateGameInterface extends JFrame {
 	}
 	
 	private CreateGameInterface() {
-		binaryTree = new BinaryTree();
+		setupTree();
+	}
+	
+	private void setupTree() {
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		binaryTree = new BinaryTree(root, yesNode, noNode);
 	}
 
 	private void createInterface() {

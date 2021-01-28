@@ -4,10 +4,8 @@ public class BinaryTree implements BinaryIterator {
 	private Node rootNode;
 	private Node iterator;
 	
-	public BinaryTree() {
-		iterator = rootNode = new Node("massa");
-		Node yesNode = new Node("lasanha");
-		Node noNode = new Node("bolo de chocolate");
+	public BinaryTree(Node root, Node yesNode, Node noNode) {
+		this.iterator = this.rootNode = root;
 		rootNode.setYesNode(yesNode);
 		rootNode.setNoNode(noNode);
 	}

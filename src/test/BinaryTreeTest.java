@@ -4,24 +4,34 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import jogoGourmet.BinaryTree;
+import jogoGourmet.Node;
 
 public class BinaryTreeTest {
 	
 	@Test
 	public void testInstanceBinaryTree() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		Assert.assertNotNull(binaryTree);
 	}
 	
 	@Test
 	public void testGetNodeValue() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		Assert.assertEquals("massa", binaryTree.getNodeValue());
 	}
 	
 	@Test
 	public void testAnwser() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		String value = binaryTree.getNodeValue();
 		boolean response = binaryTree.anwser(true);
 		Assert.assertNotEquals(value, binaryTree.getNodeValue());
@@ -30,7 +40,10 @@ public class BinaryTreeTest {
 	
 	@Test
 	public void testMoveIterator() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		String value = binaryTree.getNodeValue();
 		binaryTree.moveIterator(true);
 		Assert.assertNotEquals(value, binaryTree.getNodeValue());
@@ -38,7 +51,10 @@ public class BinaryTreeTest {
 	
 	@Test
 	public void testResetIterator() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		String value = binaryTree.getNodeValue();
 		binaryTree.moveIterator(true);
 		binaryTree.resetIterator();
@@ -47,7 +63,10 @@ public class BinaryTreeTest {
 	
 	@Test
 	public void testAddNode() {
-		BinaryTree binaryTree = new BinaryTree();
+		Node root = new Node("massa");
+		Node yesNode = new Node("lasanha");
+		Node noNode = new Node("bolo de chocolate");
+		BinaryTree binaryTree = new BinaryTree(root, yesNode, noNode);
 		String value = binaryTree.getNodeValue();
 		binaryTree.moveIterator(true);
 		binaryTree.addNode("com palitinho", "espetinho");
