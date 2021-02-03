@@ -28,8 +28,8 @@ public class CreateGameInterface extends JFrame {
 	
 	private void setupTree() {
 		Node root = new Node("massa");
-		Node yesNode = new Node("lasanha");
-		Node noNode = new Node("bolo de chocolate");
+		Node yesNode = new Node("Lasanha");
+		Node noNode = new Node("Bolo de Chocolate");
 		binaryTree = new BinaryTree(root, yesNode, noNode);
 	}
 
@@ -83,7 +83,7 @@ public class CreateGameInterface extends JFrame {
 		} else {
 			String food = JOptionPane.showInputDialog(this, foodQuestion, "Desisto", JOptionPane.QUESTION_MESSAGE);
 			String message = JOptionPane.showInputDialog(this,
-					food + " é _______ mas " + question + " não.", "Desisto", JOptionPane.QUESTION_MESSAGE);
+					food + " é _______ mas " + question + " não.", "Complete", JOptionPane.QUESTION_MESSAGE);
 			binaryTree.addNode(message, food);
 		}
 		binaryTree.resetIterator();
